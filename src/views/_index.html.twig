@@ -1,0 +1,17 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Nos recettes{% endblock %}
+
+{% block content %}
+    {% if products %}
+        <div class="card" style="width: 18rem;">
+            {%  for product in products %}
+                <div class="card-body">
+        <h5 class="card-title">{{product.Plat}}</h5>
+        <p class="card-text">voici la liste des ingredients.</p>
+        <a href="#" class="card-link">voir ingredients</a>
+        <a href="#" class="card-link">voir photos</a>
+  </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endblock %}

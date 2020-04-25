@@ -1,0 +1,14 @@
+
+
+{
+    "name": "quête/twig",
+    "authors": [
+        {
+            "name": "Lisa Thimont",
+            "email": "lisa.24@hotmail.fr"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}
