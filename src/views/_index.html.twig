@@ -1,17 +1,22 @@
 {% extends 'layout.html.twig' %}
-{% block title %}Nos recettes{% endblock %}
 
 {% block content %}
-    {% if products %}
-        <div class="card" style="width: 18rem;">
-            {%  for product in products %}
-                <div class="card-body">
-        <h5 class="card-title">{{product.Plat}}</h5>
-        <p class="card-text">voici la liste des ingredients.</p>
-        <a href="#" class="card-link">voir ingredients</a>
-        <a href="#" class="card-link">voir photos</a>
-  </div>
+    <h1>Nos recettes</h1>
+    <div class="container">
+        <div class="row">
+            {% for products in products %}
+            <div class="col-4">
+                    <div class="card-group">
+                        <div class="card mb-3">
+                            <img class="card-img-top"
+                                 src="https://via.placeholder.com/100C/O https://placeholder.com/" alt="">
+                            <div class="card-body">
+                                <p class="card-text">{{ products.Plat}}</p>
+                            </div>
+                        </div>
+                    </div>
+            </div>
             {% endfor %}
         </div>
-    {% endif %}
+    </div>
 {% endblock %}
